@@ -1,0 +1,8 @@
+import sys
+import pandas as pd
+
+excel_path = sys.argv[1]
+df = pd.read_csv(excel_path)
+
+for _, row in df.iterrows():
+    print(f"{row['a']} {row['b']} {row['image_path']}")
